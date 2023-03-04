@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Menu
+        </title>
+        <style>
+			
+			*{
+				margin:0
+				padding:0;
+				box-sizing:border-box;
+			}
+            .logo{
+				color: white;
+				font-size: 30px;
+            }
+			.logo span{
+				color:aqua;
+			}
+			
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+				background: url(https://media.istockphoto.com/id/1206796363/photo/ai-machine-learning-hands-of-robot-and-human-touching-on-big-data-network-connection.jpg?s=612x612&w=0&k=20&c=xIX5Bz7h50B83cCZG_gXkyZSOu-mG93DtOcNK7RNEAo=);
+				background-repeat: no-repeat;
+				background-size:100%;
+				
+				
+			}
+			.menu_bar{
+				background-color: navy;
+				height: 100px;
+				width: 100%;
+				display:flex;
+				align-items: center;
+				justify-content: space-between;
+				padding:0 5%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				
+			}
+			.menu_bar ul{
+				list-style:none ;
+				display: flex;
+				
+
+			}
+			.menu_bar ul li{
+				padding: 10px 30px;
+				position: relative;
+
+			}
+			.menu_bar ul li a{
+				color: white;
+				
+				text-decoration: none;
+				font-size: 20px;
+				transition: all 0.3s;
+			}
+			.menu_bar ul li a:hover{
+				color:white
+				background-color: brown;
+
+			}
+			
+			.dropdown_menu{
+				display: none;
+			}
+
+			.menu_bar ul li:hover .dropdown_menu{
+				display: block;
+				position: absolute;
+				left:0;
+				top:100%;
+
+				background-color:navy;
+				
+			}
+			.menu_bar ul li:hover .dropdown_menu ul{
+				display: block;
+				margin: 10px;
+
+			}
+			.menu_bar ul li:hover .dropdown_menu ul li{
+				width: 150px;
+				padding: 10px;
+			}
+			.dropdown_menu_1{
+				display: none;
+				
+
+			}
+			.dropdown_menu ul li:hover .dropdown_menu_1{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 150px;
+				background-color: navy;
+			}
+			img{
+				image-resolution: 100px 200px;
+			}
+			h2{
+                text-align: center;
+                font-style: italic;
+            }
+            
+            .form{
+                
+				background-color: floralwhite;
+				filter: opacity(70%);
+                padding-left: 35px;
+                padding-top: 5px;
+                padding-right:15px;
+                padding-bottom: 15px;
+                    
+                margin-top: 10%;
+                margin-left:35% ;
+                margin-right: 25%;
+                
+                width: 30%;
+                
+            }            
+            label{
+                display:inline-block;
+                font-weight: bold;
+                width:130px;
+                               
+            }
+            .button-container{
+                display: flex;
+                margin-left: 75px;
+                
+            }
+            button{
+                margin: 0 5px;
+				font-weight: bold;
+				color: black;
+				
+            }
+			footer{
+				color: white;
+				position: absolute;
+  				bottom: 0;
+  				right: 0;
+				font-size: larger;
+			}
+        </style>
+    </head>
+    <body>
+		<header>
+
+		
+            <div class="menu_bar">
+				
+					<h1 class="logo">ABC <span>Inc</span></h1>
+				
+            
+            	<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>                    
+					<li><a href="#">Articles &#9662;</a>
+						<div class="dropdown_menu">
+							<ul>
+								<li><a href="#">Frontend</a></li>
+								<li><a href="#">Backend &#9656</a>
+									<div class="dropdown_menu_1">
+										<ul>
+											<li><a href="#">NodeJs</a></li>
+											<li ><a href="#">Python</a></li>
+											<li ><a href="#">PHP</a></li>
+											<li ><a href="#">Java</a></li>
+											<li ><a href="#">Ruby</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+		<main>
+			<div class="form">
+				<h2>To Start your Career with us!!</h2>  
+					<form>
+						<label>Name</label> 
+							<input type="text" name="name"><br><br>
+						<label>Father's Name</label>
+							<input type="text" name="fathername"><br><br>
+						<label>Email Id</label>
+							<input type="text" name="email"><br><br>
+						<label>DOB</label>
+							<input type="date" name="date"><br><br>
+						<label>Gender</label> 
+							Male<input type="radio" id="g" name="gender" value="m">
+							Female<input type="radio" id="g" name="gender" value="m"><br><br>
+						<label for="area">Area of Interest</label>
+							
+						<select id="areas">
+							<option value="Java">Java</option>
+							<option value="C++">C++</option>
+							<option value="C">C</option>
+							<option value="Python">Python</option>
+						</select><br><br>
+						<label>Hobbies</label> 
+								Music<input type="checkbox" id="hob" name="hobbies" value="Music">
+								Dance<input type="checkbox" id="hob" name="hobbies" value="Dance">
+								Book<input type="checkbox" id="hob" name="hobbies" value="Book">
+						<br><br>
+						<label>Resume</label>
+							<input type="file" id="resume" name="resumes"><br><br>
+						<div class="button-container">
+							<button type="submit">Login</button>
+							<button type="submit">Cancel</button>
+							
+	
+						</div>                                        
+					</form>
+			</div>
+		</main>
+		<footer>
+			<p>&copy; SUKESH T N 20MER136</p>
+		</footer>
+    </body>
+</html>
